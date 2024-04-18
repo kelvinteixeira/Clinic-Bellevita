@@ -1,17 +1,12 @@
-import { Header } from "./components/Header";
-import { lightGreen } from "@mui/material/colors";
 import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material";
-const theme = createTheme({
-  palette: {
-    primary: lightGreen,
-  },
-});
+import { Home } from "./screens/Home";
+import { theme } from "./theme/theme";
+
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      <Home />
     </ThemeProvider>
   );
 }
