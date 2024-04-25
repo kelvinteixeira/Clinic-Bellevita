@@ -3,7 +3,7 @@ import { Avatar, Box, Grid, Typography } from "@mui/material";
 export const Team = () => {
   return (
     <Box sx={{
-      position: "relative",
+      // position: "relative",
       "&::before": {
         content: '""',
         position: "absolute",

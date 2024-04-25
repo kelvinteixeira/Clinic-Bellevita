@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Opens sans", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 
@@ -13,18 +15,24 @@
   animation: slideAndStop .6s linear forwards;
 }
 
-@keyframes slideAndStop {
+@keyframes slideRight {
   0% {
-    left: -100%;
+    transform: translateX(-100%);
   }
 
   100% {
-    left: 15%;
+    transform: translateX(0%);
   }
 }
 
+.slide-from-left {
+  animation: slideRight 1s forwards;
+}
+
+
+
 .btn-grow-effect {
-  transition: transform .3s ease-in-out; 
+  transition: transform .3s ease-in-out;
 }
 
 .btn-grow-effect:hover {
@@ -32,8 +40,8 @@
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.3); 
-  backdrop-filter: blur(5px); 
-  border-radius: 1rem; 
-  padding: 1rem; 
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  padding: 1rem;
 }
