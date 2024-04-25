@@ -18,28 +18,86 @@ export const Header = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
     >
+      <img
+        style={{
+          width: "100%",
+          height: isMobile ? "25%" : "100vh",
+          filter: "blur(4px)",
+          objectFit: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+        alt=""
+        src="../../public/images/testebg.jpg"
+      />
       {isMobile ? (
         <img
           style={{ width: 100 }}
-          src="../../public/images/logo-without-bg.png"
+          src="..//images/logo-without-bg.png"
           alt=""
         />
       ) : (
         <Grid
-          maxWidth={650}
+          maxWidth={900}
           container
-          justifyContent={"space-between"}
+          justifyContent={"space-around"}
           alignItems={"center"}
         >
-          <Button>Equipe</Button>
-          <Button>Especialidades</Button>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              fontSize: 15,
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            Equipe
+          </Button>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              fontSize: 15,
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            Especialidades
+          </Button>
           <img
-            style={{ width: 100 }}
-            src="../../public/images/logo-without-bg.png"
+            style={{ width: 150 }}
+            src="../images/logo-without-bg.png"
             alt="Logo bellavite"
           />
-          <Button>Contato</Button>
-          <Button sx={{ fontFamily: "roboto important" }}>Localização</Button>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              fontSize: 15,
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            Contato
+          </Button>
+          <Button
+            sx={{
+              fontWeight: "bold",
+              fontSize: 15,
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
+            }}
+          >
+            Localização
+          </Button>
         </Grid>
       )}
       <Grid
