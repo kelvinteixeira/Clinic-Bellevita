@@ -16,10 +16,11 @@ import {
 } from "@mui/icons-material";
 
 export const Header = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
+  const isMobile = useMediaQuery("(max-width:560px)");
+  const isTablet = useMediaQuery("(max-width:640px)");
 
   return (
-    <Box height={"100vh"}>
+    <Box height={isMobile ? "" : "100vh"}>
       <Grid
         container
         direction={"column"}
@@ -29,8 +30,7 @@ export const Header = () => {
         <img
           style={{
             width: "100%",
-            height: isMobile ? "18%" : "100vh",
-            filter: "blur(4px)",
+            height: isMobile ? "20vh" : "100vh",
             objectFit: "cover",
             position: "absolute",
             top: 0,
@@ -38,9 +38,9 @@ export const Header = () => {
             zIndex: -1,
           }}
           alt=""
-          src="../../public/images/testebg.jpg"
+          src="../../public/images/bg1.jpg"
         />
-        {isMobile ? (
+        {isTablet ? (
           <img
             style={{ width: 100 }}
             src="..//images/logo-without-bg.png"
@@ -135,14 +135,18 @@ export const Header = () => {
           style={{
             position: isMobile ? "relative" : "absolute",
             top: isMobile ? 0 : 180,
-            margin: isMobile ? 20 : 50,
-            padding: isMobile ? 20 : 50,
+            margin: isMobile ? 15 : 50,
+            padding: 15,
           }}
         >
-          <Typography align="center" fontSize={isMobile ? 20 : 50}>
+          <Typography
+            align="center"
+            fontWeight={"bold"}
+            fontSize={isMobile ? 28 : 50}
+          >
             Clínica Bellevita
           </Typography>
-          <Typography align="center" fontSize={isMobile ? 12 : 20}>
+          <Typography align="center" fontSize={isMobile ? 13 : 20}>
             Tratamentos exclusivos e eficazes. Nosso objetivo é ajudar você a
             alcançar o bem-estar usando as técnicas mais recentes combinadas com
             produtos naturais personalizados especialmente para você.

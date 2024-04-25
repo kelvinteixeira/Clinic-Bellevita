@@ -1,35 +1,61 @@
-import { Avatar, Box, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  useMediaQuery,
+} from "@mui/material";
+import { professionals } from "../services/api";
+
+type ProfessionalProps = {
+  name: string;
+  crefito: number;
+  description: string;
+  photo: string
+};
 
 export const Team = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
-    <Box sx={{
-      // position: "relative",
-      "&::before": {
-        content: '""',
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        background: "linear-gradient(to bottom, #BECEB4, #e7ede4b4)",
-        filter: "blur(10px)",
-        zIndex: -1,
-      },
-    }}>
-      <Typography align="center" fontSize={40}>
+    <Box sx={{height: '100vh', padding: 2, background: "#efefef" }}>
+      <Typography
+        align="center"
+        fontWeight={"bold"}
+        fontSize={isMobile ? 28 : 40}
+        marginBottom={3}
+      >
         Nossa equipe
       </Typography>
-      <Grid container alignItems={"center"} justifyContent={"space-between"}>
-        <Avatar
-          sx={{ width: 350, height: 450 }}
-          variant="square"
-          src="/images/time1.png"
-        />
-        <Avatar
-          sx={{ width: 250, height: 550 }}
-          variant="circular"
-          src="/images/jessica.png"
-        />
-        <img style={{ width: 250 }} src="/images/gatinha.png" alt="foto" />
-        <img style={{ width: 300 }} src="/images/jessica.png" alt="foto" />
+      <Grid
+        container
+        alignItems={"center"}
+        justifyContent={"space-around"}
+        wrap="wrap"
+      >
+        {professionals.map((professional: ProfessionalProps) => (
+          <Card sx={{ width: 500, marginBottom: 2 }}>
+            <CardMedia
+              className="shine"
+              sx={{ height: 400, marginBottom: 2 }}
+              image="images/exemplo.jpg"
+              title="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {professional.name}
+              </Typography>
+              <Typography gutterBottom variant="h6" component="div">
+                Crefito: {professional.crefito}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {professional.description}
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
       </Grid>
     </Box>
   );
