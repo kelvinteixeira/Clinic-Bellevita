@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Sedan", serif !important;
+  /* font-family: "Open Sans", sans-serif !important; */
 }
 
 
@@ -21,7 +23,7 @@
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(30%);
   }
 }
 
@@ -80,4 +82,47 @@
   100% {
     left: 125%;
   }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 2px solid #000; */
+  animation: typing 1s steps(40, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #000;
+  }
+}
+
+.normal-header {
+  background: linear-gradient(to bottom, #00000099, #78986610);
+  z-index: 1;
+}
+
+.dark-header {
+  background: #789866;
+  z-index: 1;
+}
+
+.light-text {
+  color: #a8be9b;
 }
