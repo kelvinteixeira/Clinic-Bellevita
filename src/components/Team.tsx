@@ -36,7 +36,7 @@ export const Team = () => {
         wrap="wrap"
       >
         {professionals.map((professional: ProfessionalProps) => (
-          <Card sx={{ width: 500, marginBottom: 2 }}>
+          <Card sx={{ width: 500, marginBottom: 2 }} key={professional.name}>
             <CardMedia
               className="shine"
               sx={{ height: 400, marginBottom: 2 }}

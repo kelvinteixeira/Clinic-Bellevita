@@ -1,11 +1,12 @@
-import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { SubtTitle } from "./FirstSection.styles";
 
 export const FirstSection = () => {
-  const isMobile = useMediaQuery("(max-width:560px)");
-
+  const isMobile = useMediaQuery("(max-width:430px)");
+  const isTablet = useMediaQuery("(max-width:798px)");
   return (
-    <Box
-      height={isMobile ? "" : "100vh"}
+    <Grid
+      height={isMobile ? "" : isTablet ? "100vh" : "100vh"}
       sx={{
         backgroundColor: "#78986630",
       }}
@@ -13,7 +14,7 @@ export const FirstSection = () => {
       <img
         style={{
           width: "100%",
-          height: isMobile ? "20vh" : "100vh",
+          height: isMobile ? "20vh" : isTablet ? "40vh" : "100vh",
           objectFit: "cover",
           position: "absolute",
           filter: "blur(5px)",
@@ -28,33 +29,33 @@ export const FirstSection = () => {
       <Grid
         style={{
           position: isMobile ? "relative" : "absolute",
-          top: isMobile ? 0 : 180,
+          top: isMobile ? 0 : isTablet ? 50 : 120,
           margin: isMobile ? 15 : 50,
-          padding: 15,
+          padding: 10,
         }}
       >
         <Typography
           className={isMobile ? "" : " typing-animation "}
+          fontSize={isMobile ? 30 : isTablet ? 65 : 90}
           align="center"
-          fontSize={isMobile ? 28 : 120}
           color={"secondary"}
         >
           Clínica Bellevita
         </Typography>
-        <Typography
+        <SubtTitle
           color={"secondary"}
           fontWeight={"bold"}
-          className="glass-effect  slide-from-left"
+          className={isMobile ? "" : "glass-effect slide-from-left"}
           align="center"
-          fontSize={isMobile ? 13 : 40}
+          fontSize={isMobile ? 13 : isTablet ? 20 : 30}
           sx={{ letterSpacing: 5 }}
         >
           Fisioterapia dermatofuncional
           {/* Tratamentos exclusivos e eficazes. Nosso objetivo é ajudar você a
             alcançar o bem-estar usando as técnicas mais recentes combinadas com
             produtos naturais personalizados especialmente para você. */}
-        </Typography>
+        </SubtTitle>
       </Grid>
-    </Box>
+    </Grid>
   );
 };
