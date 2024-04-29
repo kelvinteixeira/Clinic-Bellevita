@@ -10,8 +10,8 @@ import {
 import { useState, useEffect } from "react";
 
 export const Header = () => {
-  const isMobile = useMediaQuery("(max-width:320px)");
-  const isTablet = useMediaQuery("(max-width:768px)");
+  const isMobile = useMediaQuery("(max-width:430px)");
+  const isTablet = useMediaQuery("(max-width:820px)");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

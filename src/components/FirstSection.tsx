@@ -1,12 +1,11 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
-import { SubtTitle } from "./FirstSection.styles";
 
 export const FirstSection = () => {
   const isMobile = useMediaQuery("(max-width:430px)");
-  const isTablet = useMediaQuery("(max-width:798px)");
+  const isTablet = useMediaQuery("(max-width:820px)");
   return (
     <Grid
-      height={isMobile ? "" : isTablet ? "100vh" : "100vh"}
+      height={isMobile ? "15vh" : isTablet ? "40vh" : "100vh"}
       sx={{
         backgroundColor: "#78986630",
       }}
@@ -14,7 +13,7 @@ export const FirstSection = () => {
       <img
         style={{
           width: "100%",
-          height: isMobile ? "20vh" : isTablet ? "40vh" : "100vh",
+          height: isMobile ? "15vh" : isTablet ? "40vh" : "100vh",
           objectFit: "cover",
           position: "absolute",
           filter: "blur(5px)",
@@ -24,7 +23,7 @@ export const FirstSection = () => {
           content: "",
         }}
         alt=""
-        src="../../public/images/bg1.jpg"
+        src="../images/bg1.jpg"
       />
       <Grid
         style={{
@@ -42,7 +41,7 @@ export const FirstSection = () => {
         >
           Clínica Bellevita
         </Typography>
-        <SubtTitle
+        <Typography
           color={"secondary"}
           fontWeight={"bold"}
           className={isMobile ? "" : "glass-effect slide-from-left"}
@@ -54,7 +53,7 @@ export const FirstSection = () => {
           {/* Tratamentos exclusivos e eficazes. Nosso objetivo é ajudar você a
             alcançar o bem-estar usando as técnicas mais recentes combinadas com
             produtos naturais personalizados especialmente para você. */}
-        </SubtTitle>
+        </Typography>
       </Grid>
     </Grid>
   );
