@@ -44,9 +44,9 @@ export const FirstSection = () => {
         <Typography
           color={"secondary"}
           fontWeight={"bold"}
-          className={isMobile ? "" : "glass-effect slide-from-left"}
+          className={isMobile ? "glass-effect" : "glass-effect slide-from-left"}
           align="center"
-          fontSize={isMobile ? 13 : isTablet ? 20 : 30}
+          fontSize={isMobile ? 15 : isTablet ? 20 : 30}
           sx={{ letterSpacing: 5 }}
         >
           Fisioterapia dermatofuncional

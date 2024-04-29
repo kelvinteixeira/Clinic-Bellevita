@@ -39,7 +39,7 @@ export const Header = () => {
           position={"fixed"}
           justifyContent={"space-around"}
           alignItems={"center"}
-          height={isMobile ? 50 : isTablet ? 75 : 100}
+          height={isMobile ? 50 : isTablet ? 75 : 80}
           className={isScrolled ? "dark-header" : "normal-header"}
         >
           <Grid>
