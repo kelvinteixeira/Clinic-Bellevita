@@ -68,14 +68,14 @@ export const services = [
 export const professionals = [
   {
     id: 1,
-    name: "Jessica",
+    name: "Mayana Jessica",
     crefito: 123123123,
     description: "Gosta de trabalhar mais de noite pq tem medo da claridade",
     photo: "/images/jessica.png"
   },
   {
     id: 2,
-    name: "Menina la",
+    name: "Menina sobrenome",
     crefito: 321321321,
     description: "Gosta de trabalhar mais de dia pq tem medo do escuro",
     photo: "/images/gatinha.png"

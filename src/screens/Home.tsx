@@ -12,7 +12,7 @@ export const Home = () => {
       <FirstSection/>
       <AboutBellevita/>
       <Team />
-      {/* <Specialties /> */}
+      <Specialties />
     </Box>
   );
 };

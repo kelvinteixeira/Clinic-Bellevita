@@ -5,10 +5,29 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export const AboutBellevita = () => {
   const isMobile = useMediaQuery("(max-width:430px)");
   const isTablet = useMediaQuery("(max-width:820px)");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 180) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Grid
       padding={2}
@@ -20,7 +39,6 @@ export const AboutBellevita = () => {
             fontSize={isMobile ? 28 : isTablet ? 60 : ""}
             variant="h3"
             align="center"
-            gutterBottom
           >
             Sobre a Bellevita
           </Typography>
@@ -30,6 +48,10 @@ export const AboutBellevita = () => {
             <CardMedia
               sx={{
                 height: isMobile ? 200 : isTablet ? 300 : 450,
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
               }}
               image="images/equipe.jpg"
               title="green iguana"
@@ -39,13 +61,29 @@ export const AboutBellevita = () => {
         <Grid item xs={isMobile ? 11 : isTablet ? 6 : 6}>
           <Grid sx={{ overflow: "hidden", textOverflow: "ellipsis" }}>
             {!isMobile && !isTablet ? (
-              <Typography variant="h3" align="center" gutterBottom>
+              <Typography
+                variant="h3"
+                align="center"
+                className={isScrolled ? "slide-from-right" : ""}
+                sx={{
+                  display: isScrolled ? "block" : "none",
+                  animation: "slideLeft 1s forwards",
+                }}
+              >
                 Sobre a Bellevita
               </Typography>
             ) : null}
             <Typography
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
+              className={
+                isScrolled || isMobile || isTablet ? "" : "slide-from-right"
+              }
+              sx={{
+                display: isScrolled || isMobile || isTablet ? "block" : "none",
+                animation:
+                  isMobile || isTablet ? "" : "slideLeft 1.5s forwards",
+              }}
             >
               Somos um Centro Integrado que atende todas as áreas da
               fisioterapia. Trabalhamos com equipe multiprofissional composta
@@ -55,6 +93,13 @@ export const AboutBellevita = () => {
             <Typography
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
+              className={
+                isScrolled || isMobile || isTablet ? "" : "slide-from-right"
+              }
+              sx={{
+                display: isScrolled || isMobile || isTablet ? "block" : "none",
+                animation: isMobile || isTablet ? "" : "slideLeft 2s forwards",
+              }}
             >
               Em 2011, nascemos através do sonho do fisioterapeuta Erivan Ângelo
               Pereira. Desde a fundação, já atendemos mais de 6 mil pacientes,
@@ -63,6 +108,14 @@ export const AboutBellevita = () => {
             <Typography
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
+              className={
+                isScrolled || isMobile || isTablet ? "" : "slide-from-right"
+              }
+              sx={{
+                display: isScrolled || isMobile || isTablet ? "block" : "none",
+                animation:
+                  isMobile || isTablet ? "" : "slideLeft 2.5s forwards",
+              }}
             >
               O Setor de Dermatofuncional, pioneiro na nossa construção, foi um
               sucesso: em apenas 6 meses passamos a ser referência em
@@ -71,6 +124,13 @@ export const AboutBellevita = () => {
             <Typography
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
+              className={
+                isScrolled || isMobile || isTablet ? "" : "slide-from-right"
+              }
+              sx={{
+                display: isScrolled || isMobile || isTablet ? "block" : "none",
+                animation: isMobile || isTablet ? "" : "slideLeft 3s forwards",
+              }}
             >
               Em 2013, unificamos nossas unidades em um espaço maior e mais
               confortável, e hoje estamos entre os mais bem conceituados centros

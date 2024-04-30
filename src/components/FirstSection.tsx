@@ -5,6 +5,7 @@ export const FirstSection = () => {
   const isTablet = useMediaQuery("(max-width:820px)");
   return (
     <Grid
+      width={"100%"}
       height={isMobile ? "15vh" : isTablet ? "40vh" : "100vh"}
       sx={{
         backgroundColor: "#78986630",
@@ -44,10 +45,13 @@ export const FirstSection = () => {
         <Typography
           color={"secondary"}
           fontWeight={"bold"}
-          className={isMobile ? "glass-effect" : "glass-effect slide-from-left"}
           align="center"
+          className="glass-effect"
           fontSize={isMobile ? 15 : isTablet ? 20 : 30}
-          sx={{ letterSpacing: 5 }}
+          sx={{
+            letterSpacing: 5,
+            animation: isMobile ? "" : "slideRight 1s forwards",
+          }}
         >
           Fisioterapia dermatofuncional
           {/* Tratamentos exclusivos e eficazes. Nosso objetivo é ajudar você a

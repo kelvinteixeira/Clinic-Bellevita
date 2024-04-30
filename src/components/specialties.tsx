@@ -1,9 +1,7 @@
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { Box, Container, Grid, useMediaQuery } from "@mui/material";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { Box, Card, CardContent, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../services/api";
 
 type ServiceProps = {
@@ -13,58 +11,45 @@ type ServiceProps = {
 };
 
 export const Specialties = () => {
-  const isMobile = useMediaQuery("(max-width:500px)");
+  const isMobile = useMediaQuery("(max-width:430px)");
+  const isTablet = useMediaQuery("(max-width:820px)");
 
   return (
-    <Box
-      sx={{
-        position: "relative",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          background: "linear-gradient(to top, #fff, #fff)",
-          filter: "blur(10px)",
-          zIndex: -1,
-        },
-      }}
-    >
-      <Container>
-        <Typography align="center" fontSize={isMobile ? 25 : 40}>
-          Nossas especialidades
-        </Typography>
-        <Grid container wrap="wrap" justifyContent={"space-evenly"}>
-          {services.map((service: ServiceProps) => (
-            <Card
-              sx={{
-                width: 250,
-                borderRadius: 10,
-                marginBottom: 3,
-                marginTop: 1,
-                background: "#BECEB4",
-                transition: "transform 0.3s ease",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                },
-              }}
-            >
-              <CardHeader title={service.title} />
-              <CardMedia
-                component="img"
-                height="150"
-                image={service.image}
-                alt="foto do serviço"
-              />
-              <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                  {service.description}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
-        </Grid>
-      </Container>
+    <Box sx={{ background: "linear-gradient(to top, #7898664f, #e0dddd)" }}>
+      <Typography
+        align="center"
+        fontSize={isMobile ? 28 : isTablet ? 60 : 70}
+      >
+        Nossas especialidades
+      </Typography>
+      <ImageList sx={{ padding: 4 }}>
+        {services.map((item: ServiceProps) => (
+          <ImageListItem key={item.title}>
+            <img
+              style={{ height: isMobile ? 120 : 300 }}
+              srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.image}?w=248&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              position={isMobile ? "top" : "bottom"}
+              sx={{ height: isMobile ? 30 : null }}
+              title={item.title}
+              subtitle={isMobile ? null : item.description}
+            />
+            {isMobile ? (
+              <Card>
+                <CardContent sx={{ height: 100 }}>
+                  <Typography variant="body2" fontSize={12}>
+                    {item.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ) : null}
+          </ImageListItem>
+        ))}
+      </ImageList>
     </Box>
   );
 };
