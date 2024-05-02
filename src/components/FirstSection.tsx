@@ -54,9 +54,6 @@ export const FirstSection = () => {
           }}
         >
           Fisioterapia dermatofuncional
-          {/* Tratamentos exclusivos e eficazes. Nosso objetivo é ajudar você a
-            alcançar o bem-estar usando as técnicas mais recentes combinadas com
-            produtos naturais personalizados especialmente para você. */}
         </Typography>
       </Grid>
     </Grid>
