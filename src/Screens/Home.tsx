@@ -6,7 +6,7 @@ import { AboutBellevita } from "../components/AboutBellevita";
 import { Localization } from "../components/Localization";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsappButton";
-// import { Specialties } from "../components/Specialties";
+import { Specialties } from "../components/Specialties";
 
 export const Home = () => {
   return (
@@ -19,9 +19,9 @@ export const Home = () => {
       <Element id="team" name="team">
         <Team />
       </Element>
-      {/* <Element id="specialties" name="specialties"> */}
-        {/* <Specialties /> */}
-      {/* </Element> */}
+      <Element id="specialties" name="specialties">
+        <Specialties />
+      </Element>
       <Element id="localization" name="localization">
         <Localization />
       </Element>
