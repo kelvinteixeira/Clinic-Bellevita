@@ -1,7 +1,13 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import { Box, Card, CardContent, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { services } from "../services/api";
 
 type ServiceProps = {
@@ -17,8 +23,9 @@ export const Specialties = () => {
   return (
     <Box sx={{ background: "linear-gradient(to top, #7898664f, #e0dddd)" }}>
       <Typography
+        color={"secondary"}
         align="center"
-        fontSize={isMobile ? 28 : isTablet ? 60 : 70}
+        fontSize={isMobile ? 28 : isTablet ? 50 : 60}
       >
         Nossas especialidades
       </Typography>
@@ -26,7 +33,9 @@ export const Specialties = () => {
         {services.map((item: ServiceProps) => (
           <ImageListItem key={item.title}>
             <img
-              style={{ height: isMobile ? 120 : 300 }}
+              style={{
+                height: isMobile ? 120 : 250,
+              }}
               srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.image}?w=248&fit=crop&auto=format`}
               alt={item.title}

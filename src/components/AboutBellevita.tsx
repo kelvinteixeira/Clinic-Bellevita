@@ -69,12 +69,14 @@ export const AboutBellevita = () => {
                   display: isScrolled ? "block" : "none",
                   animation: "slideLeft 1s forwards",
                 }}
+                color={"secondary"}
               >
                 Sobre a Bellevita
               </Typography>
             ) : null}
             <Typography
               variant={isMobile || isTablet ? "body2" : "body1"}
+              color={"secondary"}
               marginBottom={isTablet || isMobile ? 1 : 3}
               className={
                 isScrolled || isMobile || isTablet ? "" : "slide-from-right"
@@ -91,6 +93,7 @@ export const AboutBellevita = () => {
               educadores físicos, terapeutas ocupacionais e fonoaudiólogos.
             </Typography>
             <Typography
+             color={"secondary"}
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
               className={
@@ -106,6 +109,7 @@ export const AboutBellevita = () => {
               entre crianças, adolescentes, adultos e idosos.
             </Typography>
             <Typography
+             color={"secondary"}
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
               className={
@@ -122,6 +126,7 @@ export const AboutBellevita = () => {
               tratamentos estéticos em Campina Grande.
             </Typography>
             <Typography
+             color={"secondary"}
               variant={isMobile || isTablet ? "body2" : "body1"}
               marginBottom={isTablet || isMobile ? 1 : 3}
               className={

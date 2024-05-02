@@ -97,7 +97,7 @@ export const Header = () => {
                 },
               }}
             >
-              Contato
+              Localização
             </Button>
             <Button
               sx={{
@@ -111,7 +111,7 @@ export const Header = () => {
                 },
               }}
             >
-              Localização
+              Fale conosco
             </Button>
           </Grid>
           <Grid item>
