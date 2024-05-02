@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import { Header } from "../components/Header";
 import { Team } from "../components/Team";
 import { Specialties } from "../components/Specialties";
@@ -12,11 +13,21 @@ export const Home = () => {
     <>
       <Header />
       <FirstSection />
-      <AboutBellevita />
-      <Team />
-      <Specialties />
-      <Localization />
-      <Footer />
+      <Element id="about-bellevita" name="aboutBellevita">
+        <AboutBellevita />
+      </Element>
+      <Element id="team" name="team">
+        <Team />
+      </Element>
+      <Element id="specialties" name="specialties">
+        <Specialties />
+      </Element>
+      <Element id="localization" name="localization">
+        <Localization />
+      </Element>
+      <Element id="footer" name="footer">
+        <Footer />
+      </Element>
       <WhatsAppButton />
     </>
   );

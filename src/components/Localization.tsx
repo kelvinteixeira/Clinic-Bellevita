@@ -13,6 +13,7 @@ export const Localization = () => {
         color={"secondary"}
         align="center"
         fontSize={isMobile ? 28 : isTablet ? 50 : 60}
+        marginTop={2}
       >
         Localização
       </Typography>

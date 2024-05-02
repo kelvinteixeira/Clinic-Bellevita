@@ -27,6 +27,7 @@ export const Team = () => {
         fontSize={isMobile ? 28 : isTablet ? 50 : 60}
         marginBottom={3}
         color={"secondary"}
+        marginTop={2}
       >
         Nossa equipe
       </Typography>

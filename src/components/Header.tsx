@@ -7,6 +7,7 @@ import {
   WhatsApp,
   YouTube,
 } from "@mui/icons-material";
+import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 
 export const Header = () => {
@@ -33,7 +34,7 @@ export const Header = () => {
 
   return (
     <>
-      {isTablet  ? null : (
+      {isTablet ? null : (
         <Grid
           container
           position={"fixed"}
@@ -55,7 +56,14 @@ export const Header = () => {
                 },
               }}
             >
-              Sobre a Bellevita
+              <Link
+                to="about-bellevita"
+                smooth={true}
+                duration={500}
+                offset={-50}
+              >
+                Sobre a Bellevita
+              </Link>
             </Button>
             <Button
               sx={{
@@ -69,7 +77,9 @@ export const Header = () => {
                 },
               }}
             >
-              Nossa equipe
+              <Link to="team" smooth={true} duration={500} offset={-50}>
+                Nossa equipe
+              </Link>
             </Button>
             <Button
               sx={{
@@ -83,7 +93,9 @@ export const Header = () => {
                 },
               }}
             >
-              Especialidades
+              <Link to="specialties" smooth={true} duration={500} offset={-50}>
+                Especialidades
+              </Link>
             </Button>
             <Button
               sx={{
@@ -97,7 +109,9 @@ export const Header = () => {
                 },
               }}
             >
-              Localização
+              <Link to="localization" smooth={true} duration={500} offset={-50}>
+                Localização
+              </Link>
             </Button>
             <Button
               sx={{
@@ -111,7 +125,9 @@ export const Header = () => {
                 },
               }}
             >
-              Fale conosco
+              <Link to="footer" smooth={true} duration={500} offset={-50}>
+                Contato
+              </Link>
             </Button>
           </Grid>
           <Grid item>
