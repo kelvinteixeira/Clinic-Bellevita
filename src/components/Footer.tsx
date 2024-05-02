@@ -2,6 +2,7 @@ import {
   Divider,
   Grid,
   IconButton,
+  Tooltip,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -10,8 +11,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import {
   Instagram,
-  Facebook,
-  Twitter,
   Email,
   WhatsApp,
   YouTube,
@@ -88,46 +87,46 @@ export const Footer = () => {
 
         <Grid container justifyContent={"center"}>
           <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
+            href="https://www.instagram.com/bellevitacg/"
+            target="_blank"
+            aria-label="instagram"
           >
-            <Instagram />
+            <Instagram
+              sx={{
+                "&:hover": { color: "#bcccb3" },
+              }}
+            />
+          </IconButton>
+          <IconButton>
+            <Tooltip title="Em desenvolvimento">
+              <YouTube
+                sx={{
+                  "&:hover": { color: "#bcccb3" },
+                }}
+              />
+            </Tooltip>
           </IconButton>
           <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
+            onClick={() =>
+              window.open("mailto:barbosadesousadvogados@gmail.com")
+            }
           >
-            <Facebook />
+            <Email
+              sx={{
+                "&:hover": { color: "#bcccb3" },
+              }}
+            />
           </IconButton>
           <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
+            href="https://www.instagram.com/bsadvogadoss/"
+            target="_blank"
+            aria-label="whatsapp"
           >
-            <Twitter />
-          </IconButton>
-          <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
-          >
-            <YouTube />
-          </IconButton>
-          <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
-          >
-            <Email />
-          </IconButton>
-          <IconButton
-            sx={{
-              "&:hover": { color: "#bcccb3" },
-            }}
-          >
-            <WhatsApp />
+            <WhatsApp
+              sx={{
+                "&:hover": { color: "#bcccb3" },
+              }}
+            />
           </IconButton>
         </Grid>
 

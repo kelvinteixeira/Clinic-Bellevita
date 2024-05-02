@@ -1,8 +1,12 @@
-import { Button, Grid, IconButton, useMediaQuery } from "@mui/material";
+import {
+  Button,
+  Grid,
+  IconButton,
+  Tooltip,
+  useMediaQuery,
+} from "@mui/material";
 import {
   Instagram,
-  Facebook,
-  Twitter,
   Email,
   WhatsApp,
   YouTube,
@@ -131,7 +135,11 @@ export const Header = () => {
             </Button>
           </Grid>
           <Grid item>
-            <IconButton>
+            <IconButton
+              href="https://www.instagram.com/bellevitacg/"
+              target="_blank"
+              aria-label="instagram"
+            >
               <Instagram
                 sx={{
                   color: isScrolled ? "#bcccb3" : "#3e4f35",
@@ -140,30 +148,20 @@ export const Header = () => {
               />
             </IconButton>
             <IconButton>
-              <Facebook
-                sx={{
-                  color: isScrolled ? "#bcccb3" : "#3e4f35",
-                  "&:hover": { color: isScrolled ? "#3e4f35" : "#bcccb3" },
-                }}
-              />
+              <Tooltip title="Em desenvolvimento">
+                <YouTube
+                  sx={{
+                    color: isScrolled ? "#bcccb3" : "#3e4f35",
+                    "&:hover": { color: isScrolled ? "#3e4f35" : "#bcccb3" },
+                  }}
+                />
+              </Tooltip>
             </IconButton>
-            <IconButton>
-              <Twitter
-                sx={{
-                  color: isScrolled ? "#bcccb3" : "#3e4f35",
-                  "&:hover": { color: isScrolled ? "#3e4f35" : "#bcccb3" },
-                }}
-              />
-            </IconButton>
-            <IconButton>
-              <YouTube
-                sx={{
-                  color: isScrolled ? "#bcccb3" : "#3e4f35",
-                  "&:hover": { color: isScrolled ? "#3e4f35" : "#bcccb3" },
-                }}
-              />
-            </IconButton>
-            <IconButton>
+            <IconButton
+              onClick={() =>
+                window.open("mailto:barbosadesousadvogados@gmail.com")
+              }
+            >
               <Email
                 sx={{
                   color: isScrolled ? "#bcccb3" : "#3e4f35",
@@ -171,7 +169,11 @@ export const Header = () => {
                 }}
               />
             </IconButton>
-            <IconButton>
+            <IconButton
+              href="https://www.instagram.com/bsadvogadoss/"
+              target="_blank"
+              aria-label="whatsapp"
+            >
               <WhatsApp
                 sx={{
                   color: isScrolled ? "#bcccb3" : "#3e4f35",
