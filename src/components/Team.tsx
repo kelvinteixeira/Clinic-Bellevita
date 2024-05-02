@@ -5,14 +5,22 @@ import {
   CardMedia,
   Grid,
   useMediaQuery,
+  IconButton,
+  CardContent,
 } from "@mui/material";
 import { professionals } from "../services/api";
+import { Instagram, Email, WhatsApp } from "@mui/icons-material";
 
 type ProfessionalProps = {
   name: string;
   crefito: number;
   description: string;
   photo: string;
+  socialMedias: {
+    instagram: string;
+    whatsapp: string;
+    email: string;
+  };
 };
 
 export const Team = () => {
@@ -20,7 +28,7 @@ export const Team = () => {
   const isTablet = useMediaQuery("(max-width:820px)");
 
   return (
-    <Box sx={{ padding: 2, background: "#efefef" }}>
+    <Box sx={{ background: "#efefef" }}>
       <Typography
         variant="h3"
         align="center"
@@ -39,23 +47,46 @@ export const Team = () => {
       >
         {professionals.map((professional: ProfessionalProps) => (
           <Box>
-            <Card
-              sx={{ width: isMobile ? 320 : 500, marginBottom: 2 }}
-              key={professional.name}
-            >
+            <Card sx={{ width: isMobile ? 320 : 500 }} key={professional.name}>
               <CardMedia
                 className="shine"
-                sx={{ height: isMobile ? 250 : 370, marginBottom: 2 }}
+                sx={{ height: isMobile ? 250 : 370 }}
                 image="images/exemplo.jpg"
                 title="green iguana"
               />
+              <CardContent sx={{ padding: 0 }}>
+                <Grid container justifyContent={"center"}>
+                  <IconButton
+                    href={`https://www.instagram.com/${professional.socialMedias.instagram}/`}
+                    target="_blank"
+                    aria-label="instagram"
+                  >
+                    <Instagram />
+                  </IconButton>
+
+                  <IconButton
+                    onClick={() =>
+                      window.open(`mailto:${professional.socialMedias.email}`)
+                    }
+                  >
+                    <Email />
+                  </IconButton>
+                  <IconButton
+                    href={`https://www.instagram.com/${professional.socialMedias.whatsapp}/`}
+                    target="_blank"
+                    aria-label="whatsapp"
+                  >
+                    <WhatsApp />
+                  </IconButton>
+                </Grid>
+              </CardContent>
             </Card>
             <Box
               sx={{
                 width: isMobile ? 110 : 150,
                 bgcolor: "#fff",
                 position: "relative",
-                bottom: isMobile ? 100 : 130,
+                bottom: isMobile ? 100 : 170,
                 padding: 2,
                 borderBottomRightRadius: 10,
               }}

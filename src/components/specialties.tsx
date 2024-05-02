@@ -1,19 +1,12 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { services } from "../services/api";
 
 type ServiceProps = {
   title: string;
   image: string;
-  description: string;
 };
 
 export const Specialties = () => {
@@ -29,7 +22,7 @@ export const Specialties = () => {
       >
         Nossas especialidades
       </Typography>
-      <ImageList sx={{ padding: 4 }}>
+      <ImageList sx={{ padding: 4 }} cols={isMobile ? 2 : 3}>
         {services.map((item: ServiceProps) => (
           <ImageListItem key={item.title}>
             <img
@@ -45,17 +38,7 @@ export const Specialties = () => {
               position={isMobile ? "top" : "bottom"}
               sx={{ height: isMobile ? 30 : null }}
               title={item.title}
-              subtitle={isMobile ? null : item.description}
             />
-            {isMobile ? (
-              <Card>
-                <CardContent sx={{ height: 100 }}>
-                  <Typography variant="body2" fontSize={12}>
-                    {item.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            ) : null}
           </ImageListItem>
         ))}
       </ImageList>

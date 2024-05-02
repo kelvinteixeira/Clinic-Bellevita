@@ -33,7 +33,7 @@ export const AboutBellevita = () => {
       padding={2}
       sx={{ background: "linear-gradient(to top, #7898664f, #e0dddd)" }}
     >
-      <Grid container spacing={2} justifyContent={"center"}>
+      <Grid container spacing={2} justifyContent={"center"} alignItems={'center'}>
         {isMobile || isTablet ? (
           <Typography
             fontSize={isMobile ? 28 : isTablet ? 60 : ""}
@@ -88,10 +88,7 @@ export const AboutBellevita = () => {
                   isMobile || isTablet ? "" : "slideLeft 1.5s forwards",
               }}
             >
-              Somos um Centro Integrado que atende todas as áreas da
-              fisioterapia. Trabalhamos com equipe multiprofissional composta
-              por médicos, nutricionistas, psicólogos, psicopedagogos,
-              educadores físicos, terapeutas ocupacionais e fonoaudiólogos.
+              Localizada em um oásis urbano, a clínica de fisioterapia dermatofuncional Bellevita é um refúgio para quem busca harmonia entre saúde e beleza. Seu ambiente acolhedor convida à jornada de autocuidado, com tons suaves e detalhes elegantes.
             </Typography>
             <Typography
               color={"secondary"}
@@ -105,9 +102,7 @@ export const AboutBellevita = () => {
                 animation: isMobile || isTablet ? "" : "slideLeft 2s forwards",
               }}
             >
-              Em 2011, nascemos através do sonho do fisioterapeuta Erivan Ângelo
-              Pereira. Desde a fundação, já atendemos mais de 6 mil pacientes,
-              entre crianças, adolescentes, adultos e idosos.
+              Com uma equipe dedicada de fisioterapeutas especializados, a Bellevita oferece uma variedade de tratamentos personalizados para cuidar da pele e promover o bem-estar físico. Cada serviço é projetado para realçar a beleza natural e restaurar a confiança dos pacientes.
             </Typography>
             <Typography
               color={"secondary"}
@@ -122,9 +117,7 @@ export const AboutBellevita = () => {
                   isMobile || isTablet ? "" : "slideLeft 2.5s forwards",
               }}
             >
-              O Setor de Dermatofuncional, pioneiro na nossa construção, foi um
-              sucesso: em apenas 6 meses passamos a ser referência em
-              tratamentos estéticos em Campina Grande.
+             Na Bellevita, a excelência clínica se une a uma abordagem holística, considerando não apenas a superfície da pele, mas também o equilíbrio interno do corpo. Os profissionais realizam uma avaliação minuciosa.
             </Typography>
             <Typography
               color={"secondary"}
@@ -138,10 +131,7 @@ export const AboutBellevita = () => {
                 animation: isMobile || isTablet ? "" : "slideLeft 3s forwards",
               }}
             >
-              Em 2013, unificamos nossas unidades em um espaço maior e mais
-              confortável, e hoje estamos entre os mais bem conceituados centros
-              de fisioterapia do mercado. Temos o reconhecimento de nossos
-              clientes e planos de saúde parceiros.
+              Mais do que uma clínica de tratamento, a Bellevita é um espaço de rejuvenescimento e renovação, integrando técnicas inovadoras para maximizar os benefícios para a pele e o corpo. Proporcionando uma experiência excepcional de relaxamento e revitalização.
             </Typography>
           </Grid>
         </Grid>
