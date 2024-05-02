@@ -1,7 +1,11 @@
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { services } from "../services/api";
 
 type ServiceProps = {
