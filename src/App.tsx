@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
-import { Home } from "./screens/Home";
+import { Home } from "./Screens/Home";
 import { theme } from "./theme/theme";
 
 
