@@ -13,7 +13,7 @@ type ServiceProps = {
   image: string;
 };
 
-export const Specialties = () => {
+export const OurServices = () => {
   const isMobile = useMediaQuery("(max-width:430px)");
   const isTablet = useMediaQuery("(max-width:820px)");
 

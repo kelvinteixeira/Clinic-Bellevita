@@ -97,7 +97,7 @@ export const Header = () => {
                 },
               }}
             >
-              <Link to="specialties" smooth={true} duration={500} offset={-50}>
+              <Link to="ourServices" smooth={true} duration={500} offset={-50}>
                 Especialidades
               </Link>
             </Button>
