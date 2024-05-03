@@ -44,7 +44,7 @@ export const Footer = () => {
           <Grid container alignItems={"center"} marginBottom={1}>
             <PhoneInTalkIcon color="primary" />
             <Typography
-              fontSize={isMobile ? 9 : 15}
+              fontSize={isMobile ? 12 : 15}
               fontWeight={"bold"}
               color={"secondary"}
               fontFamily={"sans-serif !important"}
@@ -55,7 +55,7 @@ export const Footer = () => {
           <Grid container alignItems={"center"} marginBottom={1}>
             <EmailIcon color="primary" />
             <Typography
-              fontSize={isMobile ? 9 : 15}
+              fontSize={isMobile ? 12 : 15}
               fontWeight={"bold"}
               color={"secondary"}
               fontFamily={"sans-serif !important"}
@@ -66,13 +66,12 @@ export const Footer = () => {
           <Grid container alignItems={"center"} marginBottom={1}>
             <FmdGoodIcon color="primary" />
             <Typography
-              fontSize={isMobile ? 9 : 15}
+              fontSize={isMobile ? 8 : 15}
               fontWeight={"bold"}
               fontFamily={"sans-serif !important"}
               color={"secondary"}
             >
-              &nbsp; Rua Siqueira Campos, 306, Sala 2, São josé, Campina Grande
-              - PB, CEP: 58313-000
+              &nbsp; Rua Siqueira Campos 306, São josé Campina Grande-PB, CEP: 58313-000
             </Typography>
           </Grid>
         </Grid>

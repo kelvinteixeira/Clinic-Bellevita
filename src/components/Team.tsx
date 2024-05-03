@@ -86,7 +86,7 @@ export const Team = () => {
                 width: isMobile ? 110 : 150,
                 bgcolor: "#fff",
                 position: "relative",
-                bottom: isMobile ? 100 : 170,
+                bottom: isMobile ? 140 : 170,
                 padding: 2,
                 borderBottomRightRadius: 10,
               }}
