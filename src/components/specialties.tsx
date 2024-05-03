@@ -1,17 +1,17 @@
 import {
   Box,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
+  // ImageList,
+  // ImageListItem,
+  // ImageListItemBar,
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { services } from "../services/api";
+// import { services } from "../services/api";
 
-type ServiceProps = {
-  title: string;
-  image: string;
-};
+// type ServiceProps = {
+//   title: string;
+//   image: string;
+// };
 
 export const Specialties = () => {
   const isMobile = useMediaQuery("(max-width:430px)");
@@ -26,7 +26,7 @@ export const Specialties = () => {
       >
         Nossas especialidades
       </Typography>
-      <ImageList sx={{ padding: 4 }} cols={isMobile ? 2 : 3}>
+      {/* <ImageList sx={{ padding: 4 }} cols={isMobile ? 2 : 3}>
         {services.map((item: ServiceProps) => (
           <ImageListItem key={item.title}>
             <img
@@ -45,7 +45,7 @@ export const Specialties = () => {
             />
           </ImageListItem>
         ))}
-      </ImageList>
+      </ImageList> */}
     </Box>
   );
 };
