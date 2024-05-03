@@ -47,7 +47,7 @@ export const FirstSection = () => {
           fontWeight={"bold"}
           align="center"
           className="glass-effect"
-          fontSize={isMobile ? 15 : isTablet ? 20 : 30}
+          fontSize={isMobile ? 7 : isTablet ? 20 : 30}
           sx={{
             letterSpacing: 5,
             animation: isMobile ? "" : "slideRight 1s forwards",

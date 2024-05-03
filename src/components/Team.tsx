@@ -46,8 +46,8 @@ export const Team = () => {
         wrap="wrap"
       >
         {professionals.map((professional: ProfessionalProps) => (
-          <Box>
-            <Card sx={{ width: isMobile ? 320 : 500 }} key={professional.name}>
+          <Box key={professional.name}>
+            <Card sx={{ width: isMobile ? 320 : 500 }} >
               <CardMedia
                 className="shine"
                 sx={{ height: isMobile ? 250 : 370 }}

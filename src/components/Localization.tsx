@@ -5,7 +5,7 @@ export const Localization = () => {
   const isTablet = useMediaQuery("(max-width:820px)");
   return (
     <Grid
-      height={isMobile || isTablet ? "60vh" : "100vh"}
+      height={isMobile || isTablet ? "70vh" : "100vh"}
       padding={2}
       sx={{ padding: 2, background: "#efefef" }}
     >
